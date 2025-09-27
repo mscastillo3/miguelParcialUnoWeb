@@ -1,14 +1,15 @@
 
-import {useTranslations} from 'next-intl';
+import { Metadata } from 'next';
 import CartaPokemon from './components/CartaPokemon';
+import {useTranslations} from 'next-intl';
+import ListadoPokemon from './components/ListadoPokemon';
 
-  const returnPokemon =  async () => {
-    const result = await fetch("https://pokeapi.co/api/v2/pokemon?limit=15");
-    const data = await result.json()
-    console.log(data)
-    return(data)
-        
-  }
+export const metadata: Metadata = {
+  title: 'Pokedex Nacional - PokeApp',
+  description: 'Explora la Pokédex de la primera generación: un listado completo de Pokémon con sus características y detalles principales.',
+};
+
+
 
 
 
@@ -16,23 +17,25 @@ import CartaPokemon from './components/CartaPokemon';
     name:string 
     url:string
 } 
-export default async function Home() {
+export  default  function Home() {
+  
 
-  const pokemones  = await returnPokemon()
+  const t = useTranslations('HomePage');
 
 
-   if (pokemones != null){
+   
       return (
-         <div className="min-h-screen px-10 py-10 bg-sky-50 grid grid-cols-3 gap-4">
-        
-          {pokemones["results"].map((pokemon: Pokemon) => {
+         <div className="  items-center   py-5 px-50 min-h-screen  bg-[#D9E9FE] ">
+          <div className=" py-4 flex  justify-center w-full">
+            <h2 className=" text-black font-bold text-2xl">{t("Pokemons")}</h2>
+          </div>
             
-            return(
-              <div  className=""key= {pokemon.name}>
-              <div><CartaPokemon pokemon={pokemon}></CartaPokemon>   </div>
-              </div> )
-                    
-                })}
-          </div> 
-  );}
+            <div className="    grid grid-cols-3 gap-4">
+            <ListadoPokemon/>
+            </div>
+
+
+
+         </div>
+      );
 }

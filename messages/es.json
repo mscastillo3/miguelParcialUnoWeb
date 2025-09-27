@@ -1,5 +1,18 @@
 {
+  "Footer": {
+    "rights": "2025 PokeApp. Todos los derechos reservados.",
+    "developed": "Desarrollado para: ISIS2710."
+
+  },
   "HomePage": {
-    "title": "Hola mundo!"
+    "Pokemons": "Listado de Pokemons"
+  },
+
+  "Ditile": {
+    "title": "Detalles del Pokemon",
+    "hight": "Altura", 
+    "wight": "Peso",
+    "habilitis": "Habilidades",
+    "Types": "Tipos"
   }
 }

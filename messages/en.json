@@ -1,5 +1,16 @@
 {
   "HomePage": {
-    "title": "Hello world!"
+    "Pokemons": "Pokemons Listed"
+  },
+  "Footer": {
+    "rights": "2025 PokeApp. All rights reserved.",
+    "developed": "Developed for: ISIS2710."
+  }, 
+  "Ditile": {
+    "title": "Ditels of the Pokemon",
+    "hight": "Height", 
+    "wight": "Weight",
+    "habilitis": "Habilitis",
+    "Types": "Types"
   }
 }
